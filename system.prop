@@ -9,7 +9,7 @@ ril.radiooff.poweroffMD=0
 ro.mtk_enable_md1=0
 persist.radio.default.sim=0
 
-ro.telephony.ril_class=MT6795
+#ro.telephony.ril_class=MT8173
 
 # WiFi
 wifi.interface=wlan0

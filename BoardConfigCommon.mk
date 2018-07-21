@@ -77,7 +77,7 @@ MTK_APPENDED_DTB_SUPPORT := yes
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # RIL
-BOARD_RIL_CLASS := ../../../device/mediatek/mt8173-common/ril
+#BOARD_RIL_CLASS := ../../../device/mediatek/mt8173-common/ril
 
 # CMHW
 BOARD_USES_CYANOGEN_HARDWARE := true
@@ -90,34 +90,34 @@ BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 EXTENDED_FONT_FOOTPRINT := true
 
 # Recovery
-RECOVERY_VARIANT := twrp
+#RECOVERY_VARIANT := twrp
 
 # TWRP
-ifeq ($(RECOVERY_VARIANT), twrp)
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
-TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
-TW_NO_REBOOT_BOOTLOADER := true
-TW_THEME := portrait_hdpi
-TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
-TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_MAX_BRIGHTNESS := 255
-BOARD_SUPPRESS_SECURE_ERASE := true
-TW_INCLUDE_CRYPTO := true
-TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
-TW_MAX_BRIGHTNESS := 255
-TW_NO_USB_STORAGE := true
-BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
-TARGET_DISABLE_TRIPLE_BUFFERING := false
-TW_USE_TOOLBOX := true
-else
+#ifeq ($(RECOVERY_VARIANT), twrp)
+#TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/musb-hdrc.0.auto/gadget/lun%d/file
+#TARGET_RECOVERY_LCD_BACKLIGHT_PATH := \"/sys/class/leds/lcd-backlight/brightness\"
+#TW_NO_REBOOT_BOOTLOADER := true
+#TW_THEME := portrait_hdpi
+#TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
+#TW_USE_MODEL_HARDWARE_ID_FOR_DEVICE_ID := true
+#RECOVERY_GRAPHICS_USE_LINELENGTH := true
+#TW_MAX_BRIGHTNESS := 255
+#BOARD_SUPPRESS_SECURE_ERASE := true
+#TW_INCLUDE_CRYPTO := true
+#TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+#TW_MAX_BRIGHTNESS := 255
+#TW_NO_USB_STORAGE := true
+#BOARD_USE_FRAMEBUFFER_ALPHA_CHANNEL := true
+#TARGET_DISABLE_TRIPLE_BUFFERING := false
+#TW_USE_TOOLBOX := true
+#else
 # CWM
 BOARD_RECOVERY_SWIPE := true
 BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
-endif
+#endif
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \
